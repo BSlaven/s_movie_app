@@ -10,6 +10,6 @@
 
 ### Pages
 
-- The first thing I had to determine is which pages I am going to need for this app.
+- After I familiarized myself with the data I will be getting, I had to determine which pages I am going to need for this app.
 
 - The app is relatively small I decided to go with only two pages: main page (root page) and movie page which will show more detail about the selected movie.
