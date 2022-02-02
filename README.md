@@ -17,4 +17,4 @@
 ### Styles
 - Another decision I had to make is what to do about styling. Whether I should use some kind of UI library or write 'my own' CSS.
 - I decided to write my own CSS because I was afraid I might get stuck with some library since it is not my preferred way of styling.
-- When it comes to writing CSS I prefer using CSS modules which have automatic support with React versions 16 and up.
+- When it comes to writing CSS in react apps I prefer using CSS modules which have automatic support with React versions 16 and up.
