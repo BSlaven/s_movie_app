@@ -4,6 +4,8 @@ import classes from './Movie.module.css';
 
 const MY_API_KEY = import.meta.env.VITE_APP_API_KEY;
 
+const IMAGE_URL = `https://image.tmdb.org/t/p/w500`
+
 const Movie = () => {
   
   const [ movie, setMovie ] = useState({});
@@ -23,7 +25,26 @@ const Movie = () => {
   
   return (
     <section className={classes.movieContainer}>
-      <h2 className={classes.movieTitle}>{movie.original_title}</h2>
+      <div className={classes.imageContainer}>
+        <img
+          className={classes.movieImage}
+          src={`${IMAGE_URL}${movie.poster_path}`}
+          alt="movie poster" />
+      </div>
+      <div className={classes.movieDetails}>
+        <div className={classes.category}>
+          <span className={classes.categoryName}>Title: </span>
+          <p className={classes.movieTitle}>{movie.original_title}</p>
+        </div>
+        <div className={classes.category}>
+          <span className={classes.categoryName}>Overview: </span>
+          <p>{movie.overview}</p>
+        </div>
+        <div className={classes.category}>
+          <span className={classes.categoryName}>Release Date: </span>
+          <p>{movie.release_date}</p>
+        </div>
+      </div>
     </section>
   );
 };
