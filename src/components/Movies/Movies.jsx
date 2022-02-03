@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import MovieCard from '../MovieCard/MovieCard';
 
+import MovieCard from '../MovieCard/MovieCard';
 import classes from './Movies.module.css';
 
 const MY_API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -9,15 +9,19 @@ const Movies = () => {
 
   const [ movies, setMovies ] = useState([]);
   const [ searchValue, setSearchValue ] = useState('');
-  // cosnt [ page, setPage ] = useState(1);
+  const [ page, setPage ] = useState(1);
 
-  const baseFetchUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${MY_API_KEY}`
+  const baseFetchUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${MY_API_KEY}&page=${page}`
 
-  const searchFetchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${MY_API_KEY}&query=${searchValue}`
+  const searchFetchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${MY_API_KEY}&query=${searchValue}&page=${page}`
   
   useEffect(() => {
-    fetchMovies(baseFetchUrl);
-  }, [])
+    if(!searchValue) {
+      fetchMovies(baseFetchUrl);
+    } else {
+      fetchMovies(searchFetchUrl);
+    }
+  }, [page]);
   
   const fetchMovies = async (url) => {
     const res = await fetch(url);
@@ -34,7 +38,14 @@ const Movies = () => {
     e.preventDefault();
     if(!searchValue) return;
     fetchMovies(searchFetchUrl);
-    setSearchValue('');
+  }
+
+  const pageUp = e => {
+    setPage(page + 1)
+  }
+
+  const pageDown = e => {
+    setPage(page - 1)
   }
 
   return (
@@ -50,6 +61,11 @@ const Movies = () => {
           name="search"
           id="search" />
       </form>
+      <p className={classes.pageSelect}>
+        <span onClick={pageDown}>-</span>
+          {page}
+        <span onClick={pageUp}>+</span>
+      </p>
       <div className={classes.moviesContainer}>
         {movies && movies.map(movie => <MovieCard {...movie} key={movie.id} />)}
       </div>
