@@ -1,9 +1,25 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+
+import classes from './Movies.module.css';
 
 const Movies = () => {
+
+  const [ movies, setMovies ] = useState([]);
+  
+  // useEffect(() => {
+  //   fetchMovies();
+  // }, [])
+  
+  const fetchMovies = url => {
+    
+  }
+
   return (
-    <div>
-      <h2>Ovo je Slavenova Movies aplikacija</h2>
+    <div className={classes.movies}>
+      <h2>All your movies right here</h2>
+      <div className={classes.moviesContainer}>
+
+      </div>
     </div>
   );
 };

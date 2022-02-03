@@ -1,6 +1,6 @@
 .app {
-  background-color: rgb(23, 0, 43);
+  background-color: #1C2833;
   min-height: 100vh;
   padding: 2rem 4rem;
-  margin: 0 auto;
+  text-align: center;
 }

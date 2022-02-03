@@ -1,0 +1,10 @@
+.movies {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+
+.moviesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
