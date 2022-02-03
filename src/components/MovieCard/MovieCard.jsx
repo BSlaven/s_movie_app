@@ -1,12 +1,21 @@
+import { Link } from 'react-router-dom'
+
 import classes from './MovieCard.module.css';
 
 const IMAGE_URL = `https://image.tmdb.org/t/p/w500`
 
-const MovieCard = ({ original_title, id, poster_path }) => {
+const MovieCard = ({ id, poster_path }) => {
+
+  // const navigate = useNavigate();
+
+  // const moreDetailsClickHandler = e => {
+  //   navigate(`/${id}`)
+  // }
 
   return (
     <div className={classes.movie} tabIndex={0}>
       <img className={classes.image} src={`${IMAGE_URL}${poster_path}`} alt="movie poster" />
+      <Link to={`/${id}`} className={classes.detailsBtn}>more details</Link>
     </div>
   );
 };
