@@ -1,0 +1,45 @@
+.movieContainer {
+  max-width: 600px;
+  min-height: 80vh;
+  color: aliceblue;
+  margin: 0 auto;
+  position: relative;
+}
+
+.movieImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.imageContainer {
+  height: min-content;
+  width: 100%;
+  max-width: 600px;
+}
+
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  padding: 1rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.category span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.category p {
+  margin: 0.5rem 0 1rem;
+  text-align: start;
+}
