@@ -6,12 +6,6 @@ const IMAGE_URL = `https://image.tmdb.org/t/p/w500`
 
 const MovieCard = ({ id, poster_path }) => {
 
-  // const navigate = useNavigate();
-
-  // const moreDetailsClickHandler = e => {
-  //   navigate(`/${id}`)
-  // }
-
   return (
     <div className={classes.movie} tabIndex={0}>
       <img className={classes.image} src={`${IMAGE_URL}${poster_path}`} alt="movie poster" />

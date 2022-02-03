@@ -10,3 +10,21 @@
   gap: 2rem;
   max-width: 1200px;
 }
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.searchInput {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 300px;
+  padding: 0.5rem 1rem;
+}
