@@ -1,0 +1,11 @@
+.movieContainer {
+  max-width: 600px;
+  height: 80vh;
+  color: aliceblue;
+  border: 1px solid olivedrab;
+  margin: 0 auto;
+}
+
+.movieTitle {
+  font-size: 2.5rem;
+}
