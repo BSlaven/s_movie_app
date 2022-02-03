@@ -16,17 +16,21 @@ const Movies = () => {
   const searchFetchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${MY_API_KEY}&query=${searchValue}&page=${page}`
   
   useEffect(() => {
-    if(!searchValue) {
-      fetchMovies(baseFetchUrl);
-    } else {
-      fetchMovies(searchFetchUrl);
-    }
+    fetchHandler()
   }, [page]);
   
   const fetchMovies = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
     setMovies(data.results);
+  }
+
+  const fetchHandler = () => {
+    if(!searchValue) {
+      fetchMovies(baseFetchUrl);
+    } else {
+      fetchMovies(searchFetchUrl);
+    }
   }
 
   const inputChangeHandler = e => {
@@ -36,8 +40,7 @@ const Movies = () => {
 
   const formSubmitHanlder = e => {
     e.preventDefault();
-    if(!searchValue) return;
-    fetchMovies(searchFetchUrl);
+    fetchHandler();
   }
 
   const pageUp = e => {
