@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import classes from './App.module.css';
+import Movies from './components/Movies/Movies';
 
 function App() {
 
