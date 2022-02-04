@@ -25,3 +25,5 @@
 ### State Management
 - Since the app is fairly small I decided to not use any state management libraries or hooks. I thought Redux would be a bit of an overkill for this kind of app. React's context API is an option but data travels only one level down so I decided not to use it.
 
+### Date
+- I used date-fns library to format the date on Movie page. This library is definitely new to me, but for this small purpose it was ok. Previously I used moment.js, but to my knowledge that library is now deprecated so I am trying to move away from it.
