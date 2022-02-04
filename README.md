@@ -19,6 +19,11 @@
 - I decided to write my own CSS because I was afraid I might get stuck with some library since it is not my preferred way of styling.
 - When it comes to writing CSS in react apps I prefer using CSS modules which have automatic support with React versions 16 and up.
 
+### Vite over create-react-app
+- I used Vite as app builder instead of create-react-app. Lately this is my choice due to its speed and lightness.
+- A couple of differences come with this choice. React files need to have extension .jsx not js.
+- Access to environment variables in a vite app is also different as evident with my use of API_KEY.
+
 ### Layout
 - On the main page, I used CSS Grid to display movies. It gives me the best/easiest options for responsive layout. Flexbox can do the same thing.
 
