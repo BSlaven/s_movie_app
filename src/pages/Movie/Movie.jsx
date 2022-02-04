@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import classes from './Movie.module.css';
 
 const MY_API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -44,6 +44,7 @@ const Movie = () => {
           <span className={classes.categoryName}>Release Date: </span>
           <p>{movie.release_date}</p>
         </div>
+        <Link className={classes.backHomeLink} to='/'>Go Back</Link>
       </div>
     </section>
   );
