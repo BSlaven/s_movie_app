@@ -43,6 +43,21 @@
   text-align: start;
 }
 
+.backHomeLink {
+  text-decoration: none;
+  color: rgb(255, 206, 206);
+  text-align: center;
+  padding: 0.5rem;
+  outline: 2px solid rgb(255, 185, 185);
+  border-radius: 4px;
+  width: 140px;
+}
+
+.backHomeLink:is(:hover, :focus) {
+  outline-offset: 2px;
+}
+
+
 @media screen and (min-width: 900px) {
   .movieContainer {
     padding-top: 3rem;
