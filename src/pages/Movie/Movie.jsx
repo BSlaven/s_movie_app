@@ -17,6 +17,7 @@ const Movie = () => {
   const oneMovieUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${MY_API_KEY}`;
 
   useEffect(() => {
+    if(!movie.release_date) return;
     const myDate = new Date(movie.release_date).getTime();
     const newDate = format(myDate, 'MMM do, yyyy');
     setDate(newDate);
